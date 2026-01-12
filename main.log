@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.12)  12 JAN 2026 03:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.12)  12 JAN 2026 03:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -45,9 +45,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language38). Reported on input line 105.
+(babel)             (\language21). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language38). Reported on input line 108.
+(babel)             (\language21). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
@@ -2017,6 +2017,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: Empty bibliography on input line 54.
 
+
+Overfull \hbox (2.21867pt too wide) in paragraph at lines 58--59
+[]\T1/xcmss/m/n/12 Visit [][]$\T1/cmtt/m/n/12 https : / / thefundamentaltheor3m
+ . github . io / LogicTopics-[]Spring2026 / main . pdf$[][] \T1/xcmss/m/n/12 fo
+r
+ []
+
 [8] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
@@ -2042,7 +2049,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  56734 strings out of 474222
  1292133 string characters out of 5748733
- 2306873 words of memory out of 5000000
+ 2306841 words of memory out of 5000000
  78022 multiletter control sequences out of 15000+600000
  576313 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2054,10 +2061,10 @@ m-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss2074.pfb
 onts/type1/public/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfsx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
 
-Output written on main.pdf (9 pages, 138898 bytes).
+Output written on main.pdf (9 pages, 140128 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
+ 169 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
  18 named destinations out of 1000 (max. 500000)
  213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
