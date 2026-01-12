@@ -1,11 +1,76 @@
-\section{Important Definitions and First Examples}
+\section{Local Convergence of Graphs}
 
-\begin{boxdefinition}[Definitions]
-    A definition is a way of defining a thing.
+Throughout this section, fix a natural number $d \in \N$.
+
+\begin{boxdefinition}
+    For $d \in \N$, define
+    \begin{align*}
+        \G_0(d) := \quotient{\set{\text{connected rooted graphs with degree } \leq d}}{\simeq}
+    \end{align*}
+    where we quotient out by isomorphisms of rooted graphs.
 \end{boxdefinition}
 
-We will now see an example.
+We can define a metric on $\G_0(d)$ in the following manner: for graphs $G$ and $H$ (or isomorphism classes thereof), define
+\begin{align*}
+    d\of{(G, v), (H, u)} = 2^{-\max{\setst{n \in \N}{B_n^G(v) \simeq B_n^H(u)}}}
+\end{align*}
 
-\begin{boxexample}[A Definition]
-    You literally just saw one...
+It is possible to show that $\G_0(d)$ is a compact metric space.
+
+\begin{boxdefinition}[Locally Cauchy Sequence of Graphs]
+    We say a sequence of finite graphs $\parenth{G_n}_{n \in \N}$ (with all degrees $\leq d$) is \textbf{locally Cauchy} (or \textbf{Benjamini-Schramm Cauchy} if for all $r \in \N$, the distribution of a random $r$-ball in $G_n$ converges weakly.
+\end{boxdefinition}
+
+Because our ambient space $\G_0$ is compact, this is equivalent to saying that for every $(G, u) \in \G_0(d)$, the sequence of probabilities
+\begin{align*}
+    \P\of{B_{r}^{G_n}\of{\mathbf{v}} \simeq (G, u)}
+\end{align*}
+converges, where $v$ is a uniformly random vertex from $G_n$.
+
+\begin{boxexample}[The Discrete Torus]
+    Consider the group $\parenth{\Zmod{n}}^2$. We can visualise this as a `discrete torus' in the same way we identify the torus $\quotient{\R}{\Z}$ with $S^1 \times S^1$: instead of crossing a circle with a circle, we cross a circle with $n$ points with a circle with $n$ points. \\
+
+    When $n = 3$ and $r = 1$, the ball of radius $1$ (at any basepoint) looks like a plus, except all points are joined three-dimensionally to some point lying beyond the vertex of the plus.
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}
+            \draw (-1, 0) -- (0, 0) -- (1, 0);
+            \draw (0, 1) -- (0, 0) -- (0, -1);
+            % Add some curvy thing
+        \end{tikzpicture}
+    \end{figure}
+
+    When $n > 3$ and $r = 1$, the ball just looks like a plus.
+    \sorry
+
+    When $n > 5$ and $r = 2$, the ball looks like a plus with a square at the centre.
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}
+            \draw (-2, 0) -- (-1, 0) -- (0, 0) -- (1, 0) -- (2, 0);
+            \draw (0, 2) -- (0, 1) -- (0, 0) -- (0, -1) -- (0, -2);
+            % Add the square with vertices (\pm 1, \pm 1)
+        \end{tikzpicture}
+    \end{figure}
+
+    More generally, for any fixed $r$, for all large enough $n$, every $r$-ball in $\parenth{\Zmod{n}}^2$ is isomorphic to $B_n^{\Z^2}(v)$.
 \end{boxexample}
+
+\begin{boxexample}[Path Graphs]
+    Let $G_n = P_n$, the path graph with $n$ vertices. \sorry
+\end{boxexample}
+
+\begin{boxlemma}
+    If $G$ is a random $d$-regular graph on $n$ vertices, the probability that $v$ is contained in a simple cycle of length $< k$ is at most $O\of{\frac{k}{\log(n)}}$.
+\end{boxlemma}
+
+So if $G_n$ is a random regular graph on $> n$ vertices, for each $r$, the probability that $B_r^{G_n}\of{\mathbf{v}}$ contains a cycle almost surely tends to $0$.
+
+\begin{boxexample}[$T_3$]
+    The sequence $G_n = B_n^{T_3}(v)$ is locally Cauchy, and the limit of each $r$-ball has more than one graph in its support.
+    % This sequence looks like the following. Start with a point and three lines going out of it at 0, 120, 240 degrees. Then, at the tip of each of these lines, create a new copy of this graph. Then at the tips of those, create a new copy. (Build a fractal out of this essentially)
+\end{boxexample}
+
+\begin{boxdefinition}
+    We say that $G_n$ converges to $\mu$ locally (where $\mu$ is a probability measure on $\G_0(d)$) if for every $r \in \N$, $(H, u) \in \G_0(d)$. 
+\end{boxdefinition}
