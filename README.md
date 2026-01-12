@@ -1,3 +1,5 @@
-# Lecture Notes
+# Lecture Notes - Advanced Topics in Logic
 
-A template for [Lecture Notes](https://thefundamentaltheor3m.github.io/Lecture-Notes-Template-2025/main.pdf).
+[Lecture Notes](https://thefundamentaltheor3m.github.io/LogicTopics-2026/main.pdf) for the course 21-800 (Advanced Topics in Logic) taught by Riley Thornton at Carnegie Mellon University in Spring 2026.
+
+Work in progress, being written as the course progresses.
